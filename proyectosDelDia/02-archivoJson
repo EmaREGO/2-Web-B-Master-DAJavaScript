@@ -1,0 +1,11 @@
+// Crear programa JS que lea archivo json
+const fs = require("fs"); //Llamando a modulos externos, fs para leer y manipular archivos node.js
+const path = require("path"); //path nos da la ruta de la computadora
+
+const RUTA = path.join(__dirname, "usuarios.json");
+
+function leerUsuarios(ruta, callback) {
+
+}
+
+//parsear, modificar y stringificr, 
