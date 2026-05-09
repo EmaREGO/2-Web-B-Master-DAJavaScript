@@ -31,7 +31,7 @@ document.getElementById('registroEvento').addEventListener('submit', function(ev
         errores.push("La fecha del evento no puede ser anterior a hoy.");
     }
 
-    // Validación de intereses (mínimo uno seleccionado)
+    //
     if (intereses.length === 0) {
         errores.push("Debes seleccionar al menos un interés.");
     }
@@ -42,8 +42,7 @@ document.getElementById('registroEvento').addEventListener('submit', function(ev
         errorContainer.style.display = 'block';
     } else {
         errorContainer.style.display = 'none';
-        alert(`¡Éxito Emanuel! Registro procesado para: ${nombre}`);
-        // Aquí podrías enviar los datos a tu API en Node.js
+        alert(`¡Éxito! Registro procesado para: ${nombre}`);
         this.reset();
     }
 });
