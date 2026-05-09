@@ -11,18 +11,18 @@ document.getElementById('registroEvento').addEventListener('submit', function(ev
     
     let errores = [];
 
-  // --- VALIDACIÓN 1: Nombre con al menos dos palabras ---
+  // val 1 nombre al menos dos valores
     if (nombre.split(' ').length < 2) {
         errores.push("Por favor, ingresa tu nombre completo (Nombre y Apellido).");
     }
 
-  // --- VALIDACIÓN 2: Teléfono exacto (10 dígitos numéricos) ---
+  // val 2 Teléfono 10 digitos
     const regexTelefono = /^[0-9]{10}$/;
     if (!regexTelefono.test(telefono)) {
         errores.push("El teléfono debe contener exactamente 10 dígitos numéricos.");
     }
 
-  // --- VALIDACIÓN 3: Fecha no puede ser en el pasado ---
+  // val 3 No se puede poner una fecha pasada
     const fechaSeleccionada = new Date(fechaInput);
     const hoy = new Date();
     hoy.setHours(0, 0, 0, 0); // Resetear horas para comparar solo fechas
