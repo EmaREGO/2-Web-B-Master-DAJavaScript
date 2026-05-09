@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Eventos - Ixmiquilpan 2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Registro de Evento</h1>
+            <form id="registroEvento" novalidate> 
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej. Emanuel Reséndiz" required>
+
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+
+                <label for="telefono">Teléfono (10 dígitos):</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="7721234567" required>
+
+                <fieldset>
+                    <legend>Intereses:</legend>
+                    <label><input type="checkbox" name="intereses" value="tecnología"> Tecnología</label>
+                    <label><input type="checkbox" name="intereses" value="negocios"> Negocios</label>
+                    <label><input type="checkbox" name="intereses" value="arte"> Arte</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Horario preferido:</legend>
+                    <label><input type="radio" name="horario" value="mañana" required> Mañana</label>
+                    <label><input type="radio" name="horario" value="tarde"> Tarde</label>
+                    <label><input type="radio" name="horario" value="noche"> Noche</label>
+                </fieldset>
+
+                <label for="fecha">Fecha del evento:</label>
+                <input type="date" id="fecha" name="fecha" required>
+
+                <label for="hora">Hora preferida:</label>
+                <input type="time" id="hora" name="hora" required>
+
+                <label for="archivo">Documento de identificación (Opcional):</label>
+                <input type="file" id="archivo" name="archivo" accept=".pdf,.jpg,.png">
+
+                <button type="submit" id="btnEnviar">Registrarse</button>
+            </form>
+            <div id="mensajeError" class="error-container"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
